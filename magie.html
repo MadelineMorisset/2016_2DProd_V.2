@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css" />
+    <title>2D Prod</title>
+  </head>
+
+  <body onLoad="goforit()">
+    <!-- En-tête -->
+    <header>
+      <!-- Logo -->
+      <a class="logo">
+        <img src="img/logo2dprod.png"/>
+      </a>
+    </header>
+
+    <!-- Barre de menu -->
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html"><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="presse.html">Presse</a></li>
+        <li><a href="concours.html">Concours</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Heure -->
+      <span id="clock"></span>
+    </nav>
+
+    <!-- Corps de la page web -->
+    <main>
+      <article>
+        <section class="services">
+          <ul class="menuservices">
+            <li>
+              <a href="services.html">
+                Animations et spetacles en tous genre
+              </a>
+            </li>
+            <li>
+              <a href="concert.html">
+                Concert
+              </a>
+            </li>
+            <li class="en-cours">
+              <a href="magie.html">
+                Spectacle de Magie
+              </a>
+            </li>
+          </ul>
+
+          <!-- Spectacle de Magie 23/02/2014 -->
+          <h3>Spectacle de Magie le 23 Février 2014</h3>
+          <img src="img/m01.jpg" class="bandeaumagie"/>
+
+          <!-- Spectacle -->
+          <h3>Spectacle :</h3>
+          <figure class="spectacle">
+            <img src="img/m02.jpg"/>
+            <img src="img/01.jpg"/>
+            <img src="img/m03.jpg"/>
+            <img src="img/05.jpg"/>
+            <img src="img/04.jpg"/>
+            <img src="img/06.jpg"/>
+            <img src="img/17.jpg"/>
+            <img src="img/m04.jpg"/>
+            <img src="img/14.jpg"/>
+            <img src="img/07.jpg"/>
+            <img src="img/08.jpg"/>
+            <img src="img/16.jpg"/>
+            <img src="img/20.jpg"/>
+            <img src="img/11.jpg"/>
+            <img src="img/13.jpg"/>
+            <img src="img/18.jpg"/>
+          </figure>
+
+          <!-- Installation -->
+          <h3>Installation :</h3>
+          <figure class="installe">
+            <img src="img/m05.jpg"/>
+            <img src="img/m06.jpg"/>
+            <img src="img/m07.jpg"/>
+            <img src="img/m08.jpg"/>
+            <img src="img/m09.jpg"/>
+            <img src="img/m10.jpg"/>
+            <img src="img/m11.jpg"/>
+            <img src="img/m12.jpg"/>
+            <img src="img/m13.jpg"/>
+            <img src="img/m14.jpg"/>
+            <img src="img/m15.jpg"/>
+            <img src="img/m16.jpg"/>
+            <img src="img/m17.jpg"/>
+            <img src="img/m18.jpg"/>
+            <img src="img/m19.jpg"/>
+            <img src="img/m20.jpg"/>
+            <img src="img/m21.jpg"/>
+            <img src="img/m22.jpg"/>
+            <img src="img/m23.jpg"/>
+          </figure>
+        </section>
+
+         <!-- Infos récentes -->
+         <aside class="infosRecentes">
+          <!-- Réseaux sociaux et e-mail -->
+          <ul class="reseaux">
+            <li>
+              <a href="https://www.facebook.com/2dprod/?ref=br_rs">
+                <img src="img/facebook.png" class="facebook"/>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/2d_prod_86">
+                <img src="img/twitter.png" class="twitter"/>
+              </a>
+            </li>
+            <li>
+              <a href="contact.html">
+                <img src="img/mail.png" class="mail"/>
+              </a>
+            </li>
+          </ul>
+
+          <!--Siège association -->
+          <div class="siege">
+            <h3>Siège : 25 place du 11 Novembre, BEAUMONT</h3>
+            <p>Tél : 07 81 73 76 28</p>
+          </div>
+
+          <img src="img/ligneseparation.png" class="separationInfo"/>
+          <br/>
+
+          <!-- Calendrier -->
+          <div id="datepicker" style="padding-left: 18%"></div>
+          <br/>
+
+          <img src="img/ligneseparation.png" class="separationInfo"/>
+
+          <!-- Évènement à venir-->
+          <div class="aVenir">
+            <h3>À venir :</h3>
+            <p>Participez au concours</p>
+            <p>"<em class="noel">Les Lueurs de Noël </em>"</p>
+            <p>Concours d'illuminations et décorations de Noël, ouvert à tous
+            les habitants et commerçants des communes de Beaumont, Dissay,
+            Saint-Cyr, Marigny-Brizay, Colombier et Naintré.</p>
+            <p>De nombreuses récompences à Gagner !!!</p>
+            <p class="inscription">
+              <a href="concours.html">Inscription au concours</a>
+            </p>
+          </div>
+
+          <img src="img/ligneseparation.png" class="separationInfo">
+
+          <figure>
+            <img src="img/affiche.png" class="affiche"/>
+            <img src="img/lotsNoël.jpg" class="lotsnoel"/>
+          </figure>
+        </aside>
+      </article>
+    </main>
+
+    <!-- Pieds de page -->
+    <footer>
+      <p>Dernière mise à jour : 04/03/2017</p>
+      <a href="magie.html">Haut de page</a>
+    </footer>
+
+    <!-- JS : Libs -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <!-- JS : functions -->
+    <script src="js/app.js"></script>
+    <script src="js/datepicker-fr.js"></script>
+    <script src="js/calendar.js"></script>
+
+  </body>
+</html>

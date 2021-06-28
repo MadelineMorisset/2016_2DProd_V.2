@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css" />
+    <title>2D Prod</title>
+  </head>
+
+  <body onLoad="goforit()">
+    <!-- En-tête -->
+    <header>
+      <!-- Logo -->
+      <a class="logo">
+        <img src="img/logo2dprod.png"/>
+      </a>
+    </header>
+
+    <!-- Barre de menu -->
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html"><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="presse.html">Presse</a></li>
+        <li><a href="concours.html">Concours</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Heure -->
+      <span id="clock"></span>
+    </nav>
+
+      <!-- Heure -->
+      <span id="clock"></span>
+    </nav>
+
+    <!-- Corps de la page web -->
+    <main>
+      <article>
+        <section class="services">
+          <!-- Liste des différents services-->
+          <ul class="menuservices">
+            <li class="en-cours">
+              <a href="services.html">
+                Animations et spetacles en tous genre
+              </a>
+            </li>
+            <li>
+              <a href="concert.html">
+                Concert
+              </a>
+            </li>
+            <li>
+              <a href="magie.html">
+                Spectacle de Magie
+              </a>
+            </li>
+          </ul>
+
+          <!-- Spectacle Cabaret -->
+          <h3>Spectacle Cabaret</h3>
+          <!-- Photos (MAJ à faire : JS) -->
+          <figure class="imgcabaret"> <!-- Format : Paysage -->
+            <img src="img/cabaret01.jpg"/>
+            <img src="img/cabaret02.jpg"/>
+            <img src="img/cabaret03.jpg"/>
+            <img src="img/cabaret04.jpg"/>
+            <img src="img/cabaret05.jpg"/>
+            <img src="img/cabaret06.jpg"/>
+            <img src="img/cabaret07.jpg"/>
+            <img src="img/cabaret08.jpg"/>
+            <img src="img/cabaret09.jpg"/>
+            <img src="img/cabaret10.jpg"/>
+            <img src="img/cabaret11.jpg"/>
+            <img src="img/cabaret12.jpg"/>
+            <img src="img/cabaret13.jpg"/>
+            <img src="img/cabaret14.jpg"/>
+            <img src="img/cabaret15.jpg"/>
+            <img src="img/cabaret16.jpg"/>
+            <img src="img/cabaret17.jpg"/>
+            <img src="img/cabaret18.jpg"/>
+            <img src="img/cabaret19.jpg"/>
+            <img src="img/cabaret42.jpg"/>
+          </figure>
+          <figure class="imgcabaret"> <!-- Format : Portrait -->
+            <img src="img/cabaret20.jpg"/>
+            <img src="img/cabaret21.jpg"/>
+            <img src="img/cabaret22.jpg"/>
+            <img src="img/cabaret23.jpg"/>
+            <img src="img/cabaret24.jpg"/>
+            <img src="img/cabaret25.jpg"/>
+            <img src="img/cabaret26.jpg"/>
+            <img src="img/cabaret27.jpg"/>
+            <img src="img/cabaret28.jpg"/>
+            <img src="img/cabaret29.jpg"/>
+            <img src="img/cabaret30.jpg"/>
+            <img src="img/cabaret31.jpg"/>
+            <img src="img/cabaret32.jpg"/>
+            <img src="img/cabaret33.jpg"/>
+            <img src="img/cabaret34.jpg"/>
+            <img src="img/cabaret35.jpg"/>
+            <img src="img/cabaret36.jpg"/>
+            <img src="img/cabaret37.jpg"/>
+            <img src="img/cabaret38.jpg"/>
+            <img src="img/cabaret39.jpg"/>
+            <img src="img/cabaret40.jpg"/>
+            <img src="img/cabaret41.jpg"/>
+          </figure>
+
+          <img src="img/ligneseparation.png" class="separation"/>
+
+          <!-- Karaoké -->
+          <h3>Karaoké</h3>
+          <!-- Photos (MAJ à faire : JS) -->
+          <figure class="imgkaraoke">
+            <img src="img/karaoke00.jpg"/>
+            <img src="img/karaoke01.jpg"/>
+            <img src="img/karaoke02.jpg"/>
+            <img src="img/karaoke03.jpg"/>
+            <img src="img/karaoke04.jpg"/>
+            <img src="img/karaoke05.jpg"/>
+          </figure>
+        </section>
+
+         <!-- Infos récentes -->
+         <aside class="infosRecentes">
+          <!-- Réseaux sociaux et e-mail -->
+          <ul class="reseaux">
+            <li>
+              <a href="https://www.facebook.com/2dprod/?ref=br_rs">
+                <img src="img/facebook.png" class="facebook"/>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/2d_prod_86">
+                <img src="img/twitter.png" class="twitter"/>
+              </a>
+            </li>
+            <li>
+              <a href="contact.html">
+                <img src="img/mail.png" class="mail"/>
+              </a>
+            </li>
+          </ul>
+
+          <!--Siège association -->
+          <div class="siege">
+            <h3>Siège : 25 place du 11 Novembre, BEAUMONT</h3>
+            <p>Tél : 07 81 73 76 28</p>
+          </div>
+
+          <img src="img/ligneseparation.png" class="separationInfo"/>
+          <br/>
+
+          <!-- Calendrier -->
+          <div id="datepicker" style="padding-left: 18%"></div>
+          <br/>
+
+          <img src="img/ligneseparation.png" class="separationInfo"/>
+
+          <!-- Évènement à venir-->
+          <div class="aVenir">
+            <h3>À venir :</h3>
+            <p>Participez au concours</p>
+            <p>"<em class="noel">Les Lueurs de Noël </em>"</p>
+            <p>Concours d'illuminations et décorations de Noël, ouvert à tous
+            les habitants et commerçants des communes de Beaumont, Dissay,
+            Saint-Cyr, Marigny-Brizay, Colombier et Naintré.</p>
+            <p>De nombreuses récompences à Gagner !!!</p>
+            <p class="inscription">
+              <a href="concours.html">Inscription au concours</a>
+            </p>
+          </div>
+
+          <img src="img/ligneseparation.png" class="separationInfo">
+
+          <figure>
+            <img src="img/affiche.png" class="affiche"/>
+            <img src="img/lotsNoël.jpg" class="lotsnoel"/>
+          </figure>
+        </aside>
+      </article>
+    </main>
+
+    <!-- Pieds de page -->
+    <footer>
+      <p>Dernière mise à jour : 04/03/2017</p>
+      <a href="services.html">Haut de page</a>
+    </footer>
+
+    <!-- JS : Libs -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <!-- JS : functions -->
+    <script src="js/app.js"></script>
+    <script src="js/datepicker-fr.js"></script>
+    <script src="js/calendar.js"></script>
+
+  </body>
+</html>

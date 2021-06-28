@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css" />
+    <title>2D Prod</title>
+  </head>
+
+  <body onLoad="goforit()">
+    <!-- En-tête -->
+    <header>
+      <!-- Logo -->
+      <a class="logo">
+        <img src="img/logo2dprod.png"/>
+      </a>
+    </header>
+
+    <!-- Barre de menu -->
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html"><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="presse.html">Presse</a></li>
+        <li><a href="concours.html">Concours</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Heure -->
+      <span id="clock"></span>
+    </nav>
+    <!-- Corps de la page web -->
+    <main>
+      <article>
+        <section class="accueil">
+          <h3>Association de spectacle à Beaumont</h3>
+
+          <img src="img/ligneseparation.png" class="separation"/>
+
+          <!-- Bande Annonce : Lueurs de Noël -->
+          <div class="video_lueurs">
+            <video controls src="video/b-a_lueursnoel2015.mp4">
+              Bande Annonce : Lueurs de Noël
+            </video>
+            <p class="b-a">
+              <strong>Bande Annonce :</strong>
+              <br/>
+              Concours : Lueurs de Noël
+            </p>
+          </div>
+
+          <img src="img/ligneseparation.png" class="separation"/>
+
+          <!-- Photos (MAJ à faire : JS + renommer img) -->
+          <figure> <!-- Format : Portrait -->
+            <img src="img/2dprod_banniere.jpg" alt="Bannière 2D Prod" />
+            <img src="img/magie14.jpg" alt="Spectacle de magie: couple, lumière bleue" />
+            <img src="img/magie15.jpg" alt="Spectacle de magie: enfermé dans un miroir" />
+            <img src="img/magie16.jpg" alt="Spectacle de magie: le couple part" />
+            <img src="img/cabaret27.jpg" alt="Cabaret: femme" />
+            <img src="img/cabaret37.jpg" alt="Cabaret: homme" />
+          </figure>
+          <figure> <!-- Format : Paysage -->
+            <img src="img/2dprod_equipe01.jpg" alt="Équipe 2D Prod de face" />
+            <img src="img/2dprod_equipe02.jpg" alt="Équipe 2D Prod de dos" />
+            <img src="img/cabaret08.jpg" alt="Cabaret: spectacle" />
+            <img src="img/magie26.jpg" alt="Spectateurs" />
+            <img src="img/2dprod_techniciens02.jpg" alt="Équipe technique 2D Prod" />
+            <img src="img/2dprod_miseenplace11.jpg" alt="Mise en place du matériel sur scène" />
+          </figure>
+
+          <img src="img/ligneseparation.png" alt="Ligne de séparation" class="separation" />
+
+          <!-- Résumé 2D Prod -->
+          <article class="resume">
+            <h3>À propos de 2D prod</h3>
+
+			      <section class="textresume">
+              <p>
+                2D Prod est une Association qui regroupe des Spectacles
+                Beaumontois et une troupe de magiciens et techniciens du
+                spectacle vivant .
+              </p>
+            </section>
+
+            <aside class="event">
+			           <img src="img/event.jpg" alt="Évènements à venir" />
+            </aside>
+
+            <p class="plus">
+              <a href="apropos.html">En savoir plus</a>
+            </p>
+          </article>
+        </section>
+
+        <!-- Infos récentes -->
+        <aside class="infosRecentes">
+          <!-- Réseaux sociaux et e-mail -->
+          <ul class="reseaux">
+            <li>
+              <a href="https://www.facebook.com/2dprod/?ref=br_rs">
+                <img src="img/facebook.png" alt="Logo Facebook" class="facebook" title="Cliquez ici !" />
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/2d_prod_86">
+                <img src="img/twitter.png" alt="Logo Twitter" class="twitter" title="Cliquez ici !" />
+              </a>
+            </li>
+            <li>
+              <a href="contact.html">
+                <img src="img/mail.png" alt="Logo e-mail" class="mail" title="Cliquez ici !" />
+              </a>
+            </li>
+          </ul>
+
+          <!--Siège association -->
+          <div class="siege">
+            <h3>Siège : 25 place du 11 Novembre, BEAUMONT</h3>
+            <p>Tél : 07 81 73 76 28</p>
+          </div>
+
+          <img src="img/ligneseparation.png" alt="Ligne de séparation" class="separationInfo" />
+          <br/>
+
+          <!-- Calendrier -->
+          <div id="datepicker" style="padding-left: 18%"></div>
+          <br/>
+
+          <img src="img/ligneseparation.png" alt="Ligne de séparation" class="separationInfo" />
+
+          <!-- Évènement à venir-->
+          <div class="aVenir">
+            <h3>À venir :</h3>
+            <p>Participez au concours</p>
+            <p>"<em class="noel">Les Lueurs de Noël </em>"</p>
+            <p>Concours d'illuminations et décorations de Noël, ouvert à tous
+            les habitants et commerçants des communes de Beaumont, Dissay,
+            Saint-Cyr, Marigny-Brizay, Colombier et Naintré.</p>
+            <p>De nombreuses récompences à Gagner !!!</p>
+            <p class="inscription">
+              <a href="concours.html">Inscription au concours</a>
+            </p>
+          </div>
+
+          <img src="img/ligneseparation.png" alt="Ligne de séparation" class="separationInfo" />
+
+          <figure>
+            <img src="img/lueursnoel_affiche.png" class="affichenoel"/>
+            <img src="img/lueursnoel_lots.jpg" class="lotsnoel"/>
+          </figure>
+        </aside>
+      </article>
+    </main>
+
+    <!-- Pieds de page -->
+    <footer>
+      <p>Dernière mise à jour : 04/03/2017</p>
+      <a href="index.html">Haut de page</a>
+    </footer>
+
+    <!-- JS : Libs -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <!-- JS : functions -->
+    <script src="js/app.js"></script>
+    <script src="js/datepicker-fr.js"></script>
+    <script src="js/calendar.js"></script>
+
+  </body>
+</html>

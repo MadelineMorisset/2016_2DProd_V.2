@@ -1,0 +1,78 @@
+<?php
+$TO = "ton_mail@quelquechose.autrechose";
+
+$h = "From: " . $TO;
+
+$message = "";
+
+while (list($key, $val) = each($HTTP_POST_VARS)) {
+$message .= "$key : $val\n";
+}
+
+mail($TO, $subject, $message, $h);
+
+Header("Location: http://ton_site.quelque chose/page de redirection.html");
+
+?>
+
+/*__________________ OU __________________*/
+
+<?php
+//envoie d'un mail via le formulaire completé
+ 
+    if(isset($_POST['societe']) AND isset($_POST['nom']) AND isset($_POST['mail']) AND isset($_POST['raison']))
+        {
+ 
+            $societe = htmlentities($_POST['societe']);
+            $nom = htmlentities($_POST['nom']);
+            $email = htmlentities($_POST['mail']);
+            $raison = htmlentities($_POST['raison']);
+            $telephone = htmlentities($_POST['telephone']);
+             
+            $to = '******@nomdedomaine.fr'; //mail perso avec le nom de domaine du site internet, testé aussi en localhost
+            $subject = "demande via le formulaire de contact du site internet";
+            $message = "Mr. ou Mme. $nom \n de la société ou collectivité : $societe \n (téléphone : $telephone ) a fait une demande via le site internet.\n \n contenu : \n $raison";
+            $message = wordwrap($message, 70);  // Dans le cas où nos lignes comportent plus de 70 caractères, nous les coupons en utilisant wordwrap()
+            $message = str_replace("\n.", "\n..", $message); //Sous windows, lorsque PHP discute directement avec un serveur SMTP, si un point est trouvé en début de ligne, il sera supprimé. Pour éviter ce comportement, remplacez ces occurrences par un double point.
+            $headers = 'From: '.$email . "\r\n" .
+            'Reply-To: $email' . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+ 
+            mail($to, $subject, $message, $headers);
+ 
+        }
+?>
+
+
+<form method="post" action="contact.php">
+<fieldset id="contact">
+<legend>Pour tout autre demande, merci de remplir ce formulaire : </legend>
+<br/>
+<table>
+<tr>
+       <td>Nom de la collectivité </td>
+       <td><label for="societe">ou de l'entreprise : </label></td>
+     <td><input type="text" name="societe" size="27"/></td>
+</tr>
+<tr></tr>
+<tr></tr>
+<tr>
+<td><label for="nom">Nom du demandeur : </label></td>
+<td><input type="text" name="nom"size="20"/></td>
+</tr>
+<tr>
+       <td><label for="telephone">N° de Tèléphone : </label></td>
+      <td><input type="text" name="telephone" size="20"/></td>
+      <td> <label for="mail">mail : </label><input type="text" name="mail"size="20"/></td>
+</tr>
+</table>
+<br/>
+<p>
+       <label for="raison">Contenu de votre demande  : </label><br/>
+       <textarea name="raison" rows="8" cols="60"></textarea>
+   </p>
+    <p>
+       <input type="submit" name="envoye"/> <input type="reset"/>
+   </p>
+   </fieldset>
+</form>

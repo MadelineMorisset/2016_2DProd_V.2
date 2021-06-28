@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css" />
+    <title>2D Prod</title>
+  </head>
+
+  <body onLoad="goforit()">
+    <!-- En-tête -->
+    <header>
+      <!-- Logo -->
+      <a class="logo">
+        <img src="img/logo2dprod.png"/>
+      </a>
+    </header>
+
+    <!-- Barre de menu -->
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html"><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="presse.html">Presse</a></li>
+        <li><a href="concours.html">Concours</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Heure -->
+      <span id="clock"></span>
+    </nav>
+
+    <!-- Corps de la page web -->
+    <main>
+      <article>
+        <section class="concours-noel">
+          <img src="img/concoursNoel.jpg" class="img-noel"/>
+
+          <!-- Bande Annonce : Lueurs de Noël -->
+          <div class="video_lueurs">
+            <video controls src="video/b-a_lueursnoel2015.mp4">
+              Bande Annonce : Lueurs de Noël
+            </video>
+            <p class="b-a">
+              <strong>Bande Annonce :</strong>
+              <br/>
+              Concours : Lueurs de Noël
+            </p>
+          </div>
+
+          <img src="img/ligneseparation.png" class="separation"/>
+
+          <h3>Inscription:</h3>
+          <p>
+            <strong>Note :</strong>
+            veuillez remplir les champs marqués d'une
+            <strong class="oblige">*</strong>.
+          </p>
+
+          <form method="post" action="inscription.php">
+            <div class="coordonnees">
+              <!-- Nom -->
+              <label for="nom">Nom : <strong class="oblige">*</strong></label>
+              <br/>
+              <input type="text" name="nom" size="35" required id="nom"/>
+              <br/>
+              <!-- Prénom -->
+              <label for="prenom">Prénom : <strong class="oblige">*</strong></label>
+              <br/>
+              <input type="text" name="prenom" size="35" required id="prenom"/>
+              <br/>
+              <!-- E-mail -->
+              <label for="email">E-mail : <strong class="oblige">*</strong></label>
+              <br/>
+              <input type="email" name="email" size="35" required id="email"/>
+              <br/>
+              <!-- Adresse -->
+              <label for="adresse">Adresse complète :
+                <strong class="oblige">*</strong>
+              </label>
+              <br/>
+              <textarea name="adresse" class="adresse" rows="5" cols="50" required></textarea>
+              <br/>
+              <!-- Téléphone -->
+              <label for="telephone">Téléphone :
+                <strong class="oblige">*</strong>
+              </label>
+              <br/>
+              <input type="tel" name="telephone" size="35" required id="telephone"/>
+              <br/>
+              <!-- Commune -->
+              Commune : <strong class="oblige">*</strong>
+              <br/>
+              <select name="commune" size="1">
+              <option>86130 Dissay</option>
+              <option>86130 Saint-Cyr</option>
+              <option>86380 Marigny-Brizay</option>
+              <option>86490 Beaumont</option>
+              <option>86490 Colombiers</option>
+              <option>86530 Naintré</option>
+              </select>
+              <br/>
+              <!-- N° étage -->
+              <label for="etage">Etage (appartement):</label>
+              <br/>
+              <input type="number" name="etage" min="1" id="etage"/>
+            </div>
+
+            <!-- Particulier ou Commerçant -->
+            <div class="partiCom">
+              Particulier ou Commerçant : <strong class="oblige">*</strong>
+              <br/>
+              <input type="checkbox" id="particulier"/>
+              <label for="particulier">Particulier</label>
+              <input type="checkbox" id="commercant"/>
+              <label for="commercant">Commerçant</label>
+            </div>
+
+            <!-- Message -->
+            <br/>
+            <label for="message">Message :</label>
+            <br/>
+            <textarea name="message" class="message" rows="7" cols="50"></textarea>
+
+            <!-- Envoie formulaire -->
+            <div class="envoie">
+              <input type="submit"
+              value="Envoyer (j'atteste avoir lu le règlement ci-dessous)"
+              data-action="formButton"/>
+            </div>
+          </form>
+
+          <!-- Règlement concours -->
+          <img src="img/logo_pdf.png" class="imgpdf"/>
+          <p class="infoFichier">
+            <strong>Règlement concours Les lueurs de Noël</strong>
+            <br/>
+            Les lueurs de Noël réglement.pdf
+            <br/>
+            Document Adobe Acrobat [70.7 KB]
+          </p>
+          <a href="download files/Les lueurs de Noël réglement.pdf"
+            class="download-link-reglemt"/>
+            Télécharger
+          </a>
+
+          <!-- Partenaires -->
+          <h3 class="partenaire">Partenaires de l'événement:</h3>
+          <img src="img/partenaires.jpg" class="imgpartenaire"/>
+
+          <img src="img/ligneseparation.png" class="separation"/>
+          <br/>
+
+          <!-- Bulletin d'inscription -->
+          <img src="img/logo_jpg.png"  class="imgjpg"/>
+          <p class="infobulletin"><strong>Bulletin d'inscription à imprimer.</strong>
+          <br/>
+          Si vous ne souhaitez pas vous inscrire en ligne déposée nous votre
+          bulletin à la mairie de Beaumont (25 place du 11 novembre, 86490 BEAUMONT)
+          <br/>
+          Bulletin d'inscription.jpg
+          <br/>
+          Image JPG [115.0 KB]</p>
+          <a href="download files/Bulletin d'inscription.jpg"
+            class="download-link-bulle"/>
+            Télécharger
+          </a>
+        </section>
+
+         <!-- Infos récentes -->
+         <aside class="infosRecentes">
+          <!-- Réseaux sociaux et e-mail -->
+          <ul class="reseaux">
+            <li>
+              <a href="https://www.facebook.com/2dprod/?ref=br_rs">
+                <img src="img/facebook.png" class="facebook"/>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/2d_prod_86">
+                <img src="img/twitter.png" class="twitter"/>
+              </a>
+            </li>
+            <li>
+              <a href="contact.html">
+                <img src="img/mail.png" class="mail"/>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Siège association -->
+          <div class="siege">
+            <h3>Siège : 25 place du 11 Novembre, BEAUMONT</h3>
+            <p>Tél : 07 81 73 76 28</p>
+          </div>
+
+          <img src="img/ligneseparation.png" class="separationInfo"/>
+          <br/>
+
+          <!-- Calendrier -->
+          <div id="datepicker" style="padding-left: 18%"></div>
+          <br/>
+
+          <img src="img/ligneseparation.png" class="separationInfo"/>
+
+          <!-- Évènement à venir-->
+          <div class="aVenir">
+            <h3>À venir :</h3>
+            <p>Participez au concours</p>
+            <p>"<em class="noel">Les Lueurs de Noël </em>"</p>
+            <p>Concours d'illuminations et décorations de Noël, ouvert à tous
+            les habitants et commerçants des communes de Beaumont, Dissay,
+            Saint-Cyr, Marigny-Brizay, Colombier et Naintré.</p>
+            <p>De nombreuses récompences à Gagner !!!</p>
+            <p class="inscription">
+              <a href="concours.html">Inscription au concours</a>
+            </p>
+          </div>
+
+          <img src="img/ligneseparation.png" class="separationInfo">
+
+          <figure>
+            <img src="img/affiche.png" class="affiche"/>
+            <img src="img/lotsNoël.jpg" class="lotsnoel"/>
+          </figure>
+        </aside>
+      </article>
+    </main>
+
+    <!-- Pieds de page -->
+    <footer>
+      <p>Dernière mise à jour : 04/03/2017</p>
+      <a href="concours.html">Haut de page</a>
+    </footer>
+
+    <!-- JS : Libs -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <!-- JS : functions -->
+    <script src="js/app.js"></script>
+    <script src="js/datepicker-fr.js"></script>
+    <script src="js/calendar.js"></script>
+
+  </body>
+</html>
